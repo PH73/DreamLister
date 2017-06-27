@@ -7,8 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DA432FC31F030A3900BC46A6 /* MaterialView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA432FC21F030A3900BC46A6 /* MaterialView.swift */; };
 		DAD6775C1F01BBF400927EAB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD6775B1F01BBF400927EAB /* AppDelegate.swift */; };
-		DAD6775E1F01BBF400927EAB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD6775D1F01BBF400927EAB /* ViewController.swift */; };
+		DAD6775E1F01BBF400927EAB /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD6775D1F01BBF400927EAB /* MainVC.swift */; };
 		DAD677611F01BBF400927EAB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DAD6775F1F01BBF400927EAB /* Main.storyboard */; };
 		DAD677641F01BBF400927EAB /* DreamLister.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DAD677621F01BBF400927EAB /* DreamLister.xcdatamodeld */; };
 		DAD677661F01BBF400927EAB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DAD677651F01BBF400927EAB /* Assets.xcassets */; };
@@ -24,9 +25,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		DA432FC21F030A3900BC46A6 /* MaterialView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MaterialView.swift; sourceTree = "<group>"; };
 		DAD677581F01BBF400927EAB /* DreamLister.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DreamLister.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DAD6775B1F01BBF400927EAB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		DAD6775D1F01BBF400927EAB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		DAD6775D1F01BBF400927EAB /* MainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
 		DAD677601F01BBF400927EAB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		DAD677631F01BBF400927EAB /* DreamLister.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DreamLister.xcdatamodel; sourceTree = "<group>"; };
 		DAD677651F01BBF400927EAB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -53,6 +55,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		DA432FC11F030A1C00BC46A6 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				DA432FC21F030A3900BC46A6 /* MaterialView.swift */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
 		DAD6774F1F01BBF300927EAB = {
 			isa = PBXGroup;
 			children = (
@@ -72,9 +82,10 @@
 		DAD6775A1F01BBF400927EAB /* DreamLister */ = {
 			isa = PBXGroup;
 			children = (
+				DA432FC11F030A1C00BC46A6 /* View */,
 				DAD677801F01C03700927EAB /* Model */,
 				DAD6775B1F01BBF400927EAB /* AppDelegate.swift */,
-				DAD6775D1F01BBF400927EAB /* ViewController.swift */,
+				DAD6775D1F01BBF400927EAB /* MainVC.swift */,
 				DAD6775F1F01BBF400927EAB /* Main.storyboard */,
 				DAD677651F01BBF400927EAB /* Assets.xcassets */,
 				DAD677671F01BBF400927EAB /* LaunchScreen.storyboard */,
@@ -180,9 +191,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DAD6775E1F01BBF400927EAB /* ViewController.swift in Sources */,
+				DAD6775E1F01BBF400927EAB /* MainVC.swift in Sources */,
 				DAD6777A1F01C02D00927EAB /* Store+CoreDataClass.swift in Sources */,
 				DAD6777D1F01C02D00927EAB /* ItemType+CoreDataProperties.swift in Sources */,
+				DA432FC31F030A3900BC46A6 /* MaterialView.swift in Sources */,
 				DAD6775C1F01BBF400927EAB /* AppDelegate.swift in Sources */,
 				DAD677781F01C02D00927EAB /* Item+CoreDataClass.swift in Sources */,
 				DAD6777C1F01C02D00927EAB /* ItemType+CoreDataClass.swift in Sources */,
@@ -354,6 +366,7 @@
 				DAD6776F1F01BBF400927EAB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
