@@ -91,3 +91,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 }
 
+let ad = UIApplication.shared.delegate as! AppDelegate // this is a shortcut to let you access the AppDelegate using 'ad'
+let context = ad.persistentContainer.viewContext
+
+
+

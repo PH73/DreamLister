@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		DA432FC31F030A3900BC46A6 /* MaterialView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA432FC21F030A3900BC46A6 /* MaterialView.swift */; };
+		DA9C5E531F0AF76400D9AC9A /* ItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA9C5E521F0AF76400D9AC9A /* ItemCell.swift */; };
 		DAD6775C1F01BBF400927EAB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD6775B1F01BBF400927EAB /* AppDelegate.swift */; };
 		DAD6775E1F01BBF400927EAB /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD6775D1F01BBF400927EAB /* MainVC.swift */; };
 		DAD677611F01BBF400927EAB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DAD6775F1F01BBF400927EAB /* Main.storyboard */; };
@@ -26,6 +27,7 @@
 
 /* Begin PBXFileReference section */
 		DA432FC21F030A3900BC46A6 /* MaterialView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MaterialView.swift; sourceTree = "<group>"; };
+		DA9C5E521F0AF76400D9AC9A /* ItemCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemCell.swift; sourceTree = "<group>"; };
 		DAD677581F01BBF400927EAB /* DreamLister.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DreamLister.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DAD6775B1F01BBF400927EAB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DAD6775D1F01BBF400927EAB /* MainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
@@ -59,6 +61,7 @@
 			isa = PBXGroup;
 			children = (
 				DA432FC21F030A3900BC46A6 /* MaterialView.swift */,
+				DA9C5E521F0AF76400D9AC9A /* ItemCell.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -191,6 +194,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DA9C5E531F0AF76400D9AC9A /* ItemCell.swift in Sources */,
 				DAD6775E1F01BBF400927EAB /* MainVC.swift in Sources */,
 				DAD6777A1F01C02D00927EAB /* Store+CoreDataClass.swift in Sources */,
 				DAD6777D1F01C02D00927EAB /* ItemType+CoreDataProperties.swift in Sources */,
