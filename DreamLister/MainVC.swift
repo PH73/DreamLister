@@ -67,9 +67,10 @@ class MainVC: UIViewController, UITableViewDelegate, UITableViewDataSource, NSFe
         
     }
     
-    func tableView(_ tableView: UITableView, heightForRowAt indexpath: Indexpath) -> CGFloat {
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 150
     }
+
     
     func attemptFetch() {
         
