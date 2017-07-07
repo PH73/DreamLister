@@ -41,7 +41,7 @@ class MainVC: UIViewController, UITableViewDelegate, UITableViewDataSource, NSFe
     }
     
     func configureCell(cell: ItemCell, indexPath: NSIndexPath) {
-        let item = controller.object(at: (indexPath as NSIndexPath) as IndexPath)
+        let item = controller.object(at: indexPath as IndexPath)
         cell.configureCell(item: item)
         
     }
@@ -82,7 +82,7 @@ class MainVC: UIViewController, UITableViewDelegate, UITableViewDataSource, NSFe
         
         self.controller = controller
         
-        do {
+        do { // a 'do' is required wherever the action could error (an error could be thrown)
             try controller.performFetch()
             
         } catch {
@@ -93,7 +93,6 @@ class MainVC: UIViewController, UITableViewDelegate, UITableViewDataSource, NSFe
     }
     
     func controllerWillChangeContent(_ controller: NSFetchedResultsController<NSFetchRequestResult>) {
-        
         
         tableView.beginUpdates()  // this function auto-updates the tableview
         
@@ -109,7 +108,7 @@ class MainVC: UIViewController, UITableViewDelegate, UITableViewDataSource, NSFe
     // the code below is all boiler plate methods for us with core data and NSFRC
 
     func controller(_ controller: NSFetchedResultsController<NSFetchRequestResult>, didChange anObject: Any, at indexPath: IndexPath?, for type: NSFetchedResultsChangeType, newIndexPath: IndexPath?) {
-        
+        // the cases below are all required by the function above - you can view that from the help
         switch(type) {
         case.insert:
             if let indexPath = newIndexPath {
@@ -150,7 +149,7 @@ class MainVC: UIViewController, UITableViewDelegate, UITableViewDataSource, NSFe
         let item2 = Item(context: context)
         item2.title = "AirPods"
         item2.price = 300
-        item2.details = "Oh yeah, I already have these already!!"
+        item2.details = "Oh yeah, I have these already!!"
         
         let item3 = Item(context: context)
         item3.title = "Tesla Model 3"
@@ -158,7 +157,7 @@ class MainVC: UIViewController, UITableViewDelegate, UITableViewDataSource, NSFe
         item3.details = "Oh yeah, not yet, but soon!"
         
         ad.saveContext()
-        
+                
     }
     
 }

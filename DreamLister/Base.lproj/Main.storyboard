@@ -98,6 +98,9 @@
                                                         <constraint firstItem="ULX-yU-ssc" firstAttribute="top" secondItem="kGu-aN-qtN" secondAttribute="bottom" constant="8" id="mNP-y5-8kd"/>
                                                         <constraint firstItem="kGu-aN-qtN" firstAttribute="top" secondItem="VPz-4e-60i" secondAttribute="bottom" constant="8" id="n3s-mS-BFF"/>
                                                     </constraints>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="boolean" keyPath="materialDesign" value="YES"/>
+                                                    </userDefinedRuntimeAttributes>
                                                 </view>
                                             </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -107,6 +110,9 @@
                                                 <constraint firstAttribute="bottomMargin" secondItem="eE1-ZU-9fM" secondAttribute="bottom" id="tTM-Aa-JsG"/>
                                                 <constraint firstItem="eE1-ZU-9fM" firstAttribute="leading" secondItem="wgf-2B-wLc" secondAttribute="leadingMargin" id="zgY-oZ-NOj"/>
                                             </constraints>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="boolean" keyPath="materialDesign" value="YES"/>
+                                            </userDefinedRuntimeAttributes>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
