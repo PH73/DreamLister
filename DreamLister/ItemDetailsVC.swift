@@ -17,6 +17,8 @@ class ItemDetailsVC: UIViewController, UIPickerViewDataSource, UIPickerViewDeleg
     @IBOutlet weak var detailsField: UITextField!
     
     var stores = [Store]()
+    var itemToEdit: Item? //the ? signified an optional variable
+    
     
 
     override func viewDidLoad() {
@@ -47,6 +49,11 @@ class ItemDetailsVC: UIViewController, UIPickerViewDataSource, UIPickerViewDeleg
 //        
 //        ad.saveContext()
         getStores()
+        
+        if itemToEdit != nil {
+            loadItemData()
+        }
+        
     }
 
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
@@ -83,4 +90,59 @@ class ItemDetailsVC: UIViewController, UIPickerViewDataSource, UIPickerViewDeleg
         }
         
     }
+    
+    @IBAction func savePressed(_ sender: UIButton) {
+        //here is where we will take the user entered new item (including photo and store) and save to core data
+        var item: Item!
+        
+        if itemToEdit == nil {
+            item = Item(context: context)
+        } else {
+            item = itemToEdit
+        }
+        
+        if let title = titleField.text {
+            item.title = title
+        }
+        
+        //remember price is stated as a double in the core data store so we us NSString to convert string to double
+        if let price = priceField.text {
+            item.price = (price as NSString).doubleValue
+        }
+    
+        if let details = detailsField.text {
+            item.details = details
+        }
+        // the .tostore text below references the relationship we created in coredata
+        item.toStore = stores[storePicker.selectedRow(inComponent: 0)]
+        
+        ad.saveContext()
+        
+        navigationController?.popViewController(animated: true)
+        
+    }
+    
+    func loadItemData() {
+        
+        if let item = itemToEdit {
+            titleField.text = item.title
+            priceField.text = "\(item.price)"
+            detailsField.text = item.details
+            
+            if let store = item.toStore {
+                
+                var index = 0
+                repeat {
+                    let s = stores[index]
+                    if s.name == store.name {
+                        storePicker.selectRow(index, inComponent: 0, animated: false)
+                        break
+                    }
+                    index += 1
+                } while (index < stores.count)
+            }
+        }
+    }
+    
+    
 }

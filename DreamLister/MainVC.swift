@@ -46,6 +46,27 @@ class MainVC: UIViewController, UITableViewDelegate, UITableViewDataSource, NSFe
         
     }
     
+    // Get's us ready to send a segue change
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "ItemDetailsVC" {
+            if let destination = segue.destination as? ItemDetailsVC {
+                if let item = sender as? Item {
+                    destination.itemToEdit = item
+                }
+            }
+        }
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        //this function sends the selected (to edit) object to the new view controller
+        if let objs = controller.fetchedObjects , objs.count > 0 {
+            let item = objs[indexPath.row]
+            performSegue(withIdentifier: "ItemDetailsVC", sender: item)
+        }
+        
+    }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
         if let sections = controller.sections {
@@ -80,6 +101,7 @@ class MainVC: UIViewController, UITableViewDelegate, UITableViewDataSource, NSFe
         
         let controller = NSFetchedResultsController(fetchRequest: fetchRequest, managedObjectContext: context, sectionNameKeyPath: nil, cacheName: nil)
         
+        controller.delegate = self //this tells the controller methods to listen to updates
         self.controller = controller
         
         do { // a 'do' is required wherever the action could error (an error could be thrown)
