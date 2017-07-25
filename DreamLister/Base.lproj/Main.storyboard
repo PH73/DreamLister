@@ -170,7 +170,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="imagePick" translatesAutoresizingMaskIntoConstraints="NO" id="XYd-6P-Xq2">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="imagePick" translatesAutoresizingMaskIntoConstraints="NO" id="XYd-6P-Xq2">
                                 <rect key="frame" x="16" y="72" width="100" height="100"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="100" id="HFB-Nr-uNc"/>
@@ -185,18 +185,21 @@
                                     <constraint firstAttribute="height" constant="100" id="6lF-4a-ooJ"/>
                                     <constraint firstAttribute="width" constant="100" id="yBV-90-023"/>
                                 </constraints>
+                                <connections>
+                                    <action selector="addImage:" destination="gmZ-SJ-Y6o" eventType="touchUpInside" id="NC5-4h-GiN"/>
+                                </connections>
                             </button>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="fill" contentVerticalAlignment="center" text="Title" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZMl-oe-Rln">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="fill" contentVerticalAlignment="center" placeholder="Title" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="ZMl-oe-Rln">
                                 <rect key="frame" x="124" y="82" width="270" height="40"/>
                                 <color key="backgroundColor" red="0.88235294119999996" green="0.88235294119999996" blue="0.88235294119999996" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="cpv-0r-vgE"/>
                                 </constraints>
                                 <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="fill" contentVerticalAlignment="center" text="Price" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="TL4-67-TMC">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="fill" contentVerticalAlignment="center" placeholder="Price" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="TL4-67-TMC">
                                 <rect key="frame" x="124" y="130" width="270" height="40"/>
                                 <color key="backgroundColor" red="0.88235294119999996" green="0.88235294119999996" blue="0.88235294119999996" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
@@ -206,7 +209,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="fill" contentVerticalAlignment="center" text="Details" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eJb-2J-Cfs">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="fill" contentVerticalAlignment="center" placeholder="Details" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eJb-2J-Cfs">
                                 <rect key="frame" x="20" y="182" width="374" height="60"/>
                                 <color key="backgroundColor" red="0.88235294119999996" green="0.88235294119999996" blue="0.88235294119999996" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
@@ -273,12 +276,16 @@
                     <navigationItem key="navigationItem" title="Add/Edit" id="Fyh-GB-isG">
                         <barButtonItem key="rightBarButtonItem" systemItem="trash" id="GLz-Ts-rXm">
                             <color key="tintColor" red="1" green="0.0" blue="0.31740993919999999" alpha="1" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <action selector="deletePressed:" destination="gmZ-SJ-Y6o" id="xZ4-u6-9WG"/>
+                            </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="detailsField" destination="eJb-2J-Cfs" id="7lV-uh-eCD"/>
                         <outlet property="priceField" destination="TL4-67-TMC" id="Yvr-TC-YSE"/>
                         <outlet property="storePicker" destination="icK-oB-DKv" id="LZ5-qg-oAf"/>
+                        <outlet property="thumbImg" destination="XYd-6P-Xq2" id="f0u-Oq-fit"/>
                         <outlet property="titleField" destination="ZMl-oe-Rln" id="DhO-OZ-PkU"/>
                     </connections>
                 </viewController>
