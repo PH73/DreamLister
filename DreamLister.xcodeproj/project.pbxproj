@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		DA432FC31F030A3900BC46A6 /* MaterialView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA432FC21F030A3900BC46A6 /* MaterialView.swift */; };
+		DA626BC11F27771C000C3EB5 /* ItemDetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA626BC01F27771C000C3EB5 /* ItemDetailsVC.swift */; };
 		DA80B70E1F104D8100B168E4 /* ItemType+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA80B7061F104D8100B168E4 /* ItemType+CoreDataClass.swift */; };
 		DA80B70F1F104D8100B168E4 /* ItemType+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA80B7071F104D8100B168E4 /* ItemType+CoreDataProperties.swift */; };
 		DA80B7101F104D8100B168E4 /* Store+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA80B7081F104D8100B168E4 /* Store+CoreDataClass.swift */; };
@@ -27,6 +28,7 @@
 
 /* Begin PBXFileReference section */
 		DA432FC21F030A3900BC46A6 /* MaterialView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MaterialView.swift; sourceTree = "<group>"; };
+		DA626BC01F27771C000C3EB5 /* ItemDetailsVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemDetailsVC.swift; sourceTree = "<group>"; };
 		DA80B7061F104D8100B168E4 /* ItemType+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ItemType+CoreDataClass.swift"; sourceTree = "<group>"; };
 		DA80B7071F104D8100B168E4 /* ItemType+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ItemType+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		DA80B7081F104D8100B168E4 /* Store+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Store+CoreDataClass.swift"; sourceTree = "<group>"; };
@@ -64,6 +66,15 @@
 				DA9C5E521F0AF76400D9AC9A /* ItemCell.swift */,
 			);
 			name = View;
+			sourceTree = "<group>";
+		};
+		DA626BBF1F2776EC000C3EB5 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				DAD6775D1F01BBF400927EAB /* MainVC.swift */,
+				DA626BC01F27771C000C3EB5 /* ItemDetailsVC.swift */,
+			);
+			name = Controller;
 			sourceTree = "<group>";
 		};
 		DA80B7161F104D8B00B168E4 /* Model */ = {
@@ -111,7 +122,7 @@
 				DA80B7161F104D8B00B168E4 /* Model */,
 				DA432FC11F030A1C00BC46A6 /* View */,
 				DAD6775B1F01BBF400927EAB /* AppDelegate.swift */,
-				DAD6775D1F01BBF400927EAB /* MainVC.swift */,
+				DA626BBF1F2776EC000C3EB5 /* Controller */,
 				DAD6775F1F01BBF400927EAB /* Main.storyboard */,
 				DAD677651F01BBF400927EAB /* Assets.xcassets */,
 				DAD677671F01BBF400927EAB /* LaunchScreen.storyboard */,
@@ -202,6 +213,7 @@
 				DA80B7151F104D8100B168E4 /* Image+CoreDataProperties.swift in Sources */,
 				DA432FC31F030A3900BC46A6 /* MaterialView.swift in Sources */,
 				DA80B7111F104D8100B168E4 /* Store+CoreDataProperties.swift in Sources */,
+				DA626BC11F27771C000C3EB5 /* ItemDetailsVC.swift in Sources */,
 				DAD6775C1F01BBF400927EAB /* AppDelegate.swift in Sources */,
 				DA80B7101F104D8100B168E4 /* Store+CoreDataClass.swift in Sources */,
 				DA80B70F1F104D8100B168E4 /* ItemType+CoreDataProperties.swift in Sources */,
