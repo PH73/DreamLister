@@ -33,6 +33,9 @@
                                     <segment title="Title"/>
                                 </segments>
                                 <color key="tintColor" red="0.50749810610000001" green="0.50749810610000001" blue="0.50749810610000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <connections>
+                                    <action selector="segmentChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="yW1-YB-Dcu"/>
+                                </connections>
                             </segmentedControl>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="150" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="nO8-Rs-7Nv">
                                 <rect key="frame" x="20" y="120" width="374" height="616"/>
